@@ -1,0 +1,30 @@
+#workflow
+#Should have name
+name: Say hello
+
+# on tells when the workflows will run
+
+on: 
+  workflow_dispatch: 
+
+#Jobs--- tells what the workflow should do; there can be one or more jobs; it acts as a object so need indentation
+#Should be inside the workflows
+
+jobs:
+  say hello:
+  # create a ephermal container with ubuntu running
+    runs-on: ubuntu-latest
+    # that ephermal container does have steps which executes under run command
+    steps:
+      - name: say hello to everyone
+        run: echo 'hello , welcome to github actions'
+
+
+
+#Actios
+#Should be inside the steps
+
+
+
+
+
