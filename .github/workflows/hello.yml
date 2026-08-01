@@ -11,7 +11,7 @@ on:
 #Should be inside the workflows
 
 jobs:
-  say hello:
+  sayhello:
   # create a ephermal container with ubuntu running
     runs-on: ubuntu-latest
     # that ephermal container does have steps which executes under run command
