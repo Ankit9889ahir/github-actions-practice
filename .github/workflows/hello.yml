@@ -17,7 +17,7 @@ jobs:
     # that ephermal container does have steps which executes under run command
     steps:
       - name: say hello to everyone
-        run: echo 'hello , welcome to github actions'
+        run: echo "hello , welcome to github actions"
 
 
 
