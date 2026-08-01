@@ -1,6 +1,6 @@
 #workflow
 #Should have name
-name: Say hello
+name:  hello
 
 # on tells when the workflows will run
 
