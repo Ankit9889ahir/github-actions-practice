@@ -4,8 +4,11 @@ name:  hello
 
 # on tells when the workflows will run
 
-on: 
-  workflow_dispatch: 
+on:
+  push:
+    branches:
+      - main
+
 
 #Jobs--- tells what the workflow should do; there can be one or more jobs; it acts as a object so need indentation
 #Should be inside the workflows
