@@ -17,4 +17,5 @@ jobs:
         #this step will install the linter tool
       - name: install linter
         run: pip install ruff
-     
+      - name: ruff linter check
+        run: ruff check .
