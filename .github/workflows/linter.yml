@@ -12,7 +12,7 @@ jobs:
     #this step will automatically clone the code of the current branch into the runnner.
       - name: clone/checkout the code
       #it is the specific command that downloads a copy of your repository's code into that runner's workspace so your workflow can actually read, build, test, or deploy your files.
-        uses: actions/checkout@v4     
+        uses: actions/checkout@v7   
         #this step will install the linter tool
       - name: install linter
         run: pip install ruff
