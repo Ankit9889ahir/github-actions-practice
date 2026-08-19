@@ -14,14 +14,14 @@ jobs:
       - name: build the code
         run: echo "building the code"
   test:
-    needs: [build]
+    needs: [code,build]
     runs-on: ubuntu-latest
     steps:
       - name: test the code
         run: echo "Testing the code"
 
   deploy:
-    needs: [code,build]
+    needs: [code,build,test]
     runs-on: ubuntu-latest
     steps:
       - name: deploy the code
