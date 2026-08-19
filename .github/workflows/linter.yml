@@ -1,6 +1,6 @@
 # whenever someone changes the python code
 #this will automatically review the code, syntax errors,indentation(linting) is correct or not.
-name: linter
+name: Auto linter
 on: 
   push:
     paths: "*.py"
