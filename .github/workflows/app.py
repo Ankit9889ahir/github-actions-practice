@@ -1,3 +1,4 @@
+#this code is for small flask app
 from flask import Flask, render_template
 app = Flask(__name__)
 
