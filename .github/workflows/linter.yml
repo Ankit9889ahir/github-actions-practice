@@ -1,20 +1,30 @@
 # whenever someone changes the python code
 #this will automatically review the code, syntax errors,indentation(linting) is correct or not.
 name: Auto linter
+
 on: 
-  push: 
-    paths: "*.py"
+  push:
+    paths: 
+      - "**/*.py"  # Fixed: Tracks all Python files across all subdirectories
 
 jobs:
   code:
     runs-on: ubuntu-latest
     steps:
-    #this step will automatically clone the code of the current branch into the runnner.
+      #this step will automatically clone the code of the current branch into the runnner.
       - name: clone/checkout the code
-      #it is the specific command that downloads a copy of your repository's code into that runner's workspace so your workflow can actually read, build, test, or deploy your files.
-        uses: actions/checkout@v7   
-        #this step will install the linter tool
+        uses: actions/checkout@v4 # Note: v4 is the current stable version for checkout
+
+      # Crucial Step: Set up Python before trying to run pip
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11' # Choose your target Python version
+
+      #this step will install the linter tool
       - name: install linter
         run: pip install ruff
-      - name: ruff linter check
+
+      # Added Step: This actually executes the linter and flags syntax/formatting issues
+      - name: Run Ruff Linter
         run: ruff check .
