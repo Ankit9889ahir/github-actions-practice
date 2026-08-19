@@ -2,8 +2,7 @@
 #this will automatically review the code, syntax errors,indentation(linting) is correct or not.
 name: Auto linter
 on: 
-  push:
-  workflow_dispatch: 
+  push: 
     paths: *.py
 
 jobs:
