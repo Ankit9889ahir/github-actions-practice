@@ -3,7 +3,7 @@
 name: Auto linter
 on: 
   push: 
-    paths: *.py
+    paths: "*.py"
 
 jobs:
   code:
