@@ -1,28 +1,30 @@
-#this is testing CICD practice file
 name: CICD
 
-on: 
-  workflow_dispatch
+on:
+  workflow_dispatch:
 
 jobs:
-  steps:
+  code:
     runs-on: ubuntu-latest
-    code: [code]
-    run: echo "cloning code"
-
-  steps:
-    runs-on : ubuntu-latest
-    build: [buil]
-    run: echo "building code..."
-
-  steps:
-    runs-on : ubuntu-latest
-    test: [test]
-    run : echo "testing code..."
-
-  steps:
-    runs-on : ubuntu-latest
-    deploy: [deploy]
-    run : echo "deploying application"
-
-    
+    steps:
+      - name: clone the code
+        run: echo "cloning the code"
+        
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build the code
+        run: echo "building the code"
+        
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test the code
+        run: echo "Testing the code:
+        
+   deploy:
+    runs-on: ubuntu-latest
+    steps:
+      -name: Deploy the app
+       run: echo "deploying the app.."
+      
